@@ -6,9 +6,9 @@
     <title>University Website</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
 <section class="header">
@@ -17,8 +17,8 @@
         <div class="nav-links" id="navLinks">
             <i class="fa fa-times" onclick="hideMenu()"></i>
             <ul>
-                <li><a href="">HOME</a></li>
-                <li><a href="">ABOUT</a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="https://alatoo.edu.kg/" target="_blank">ABOUT</a></li>
                 <li><a href="">EXCHANGE</a></li>
                 <li><a href="">PROGRAMS BY COUNTRIES</a></li>
                 <li><a href="">CONTACT</a></li>
@@ -47,11 +47,42 @@
             <p>Info about it</p>
         </div>
     </div>
-
 </section>
-<!------ JavaScripy for menu ------>
+
+<!------ Statistics ------>
+<section class="stats">
+        <h2>AIU's Global Reach</h2>
+    <div class="stats-container">
+        <div class="stat-item">
+            <div class="stat-number">100+</div>
+            <div class="stat-label">International partners</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">7</div>
+            <div class="stat-label">Dual degree programs</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">60+</div>
+            <div class="stat-label">Countries, representing students, teachers, and alumni</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">3,000+</div>
+            <div class="stat-label">Students</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">International students</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">4,500+</div>
+            <div class="stat-label">Graduates</div>
+        </div>
+    </div>
+</section>
+
+<!------ JavaScript for menu ------>
 <script>
-    var navLinks = document.getElementById("navLinks")
+    var navLinks = document.getElementById("navLinks");
     function showMenu(){
         navLinks.style.right = "0";
     }
@@ -59,5 +90,12 @@
         navLinks.style.right = "-200px";
     }
 </script>
+
+<!------- Call to Action -------->
+<section class="cta">
+    <h1>If you are interested in an exchange program via AIU</h1>
+    <a href="" class="cta-btn">CONTACT US</a>
+</section>
+
 </body>
 </html>
