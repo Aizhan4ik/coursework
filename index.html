@@ -1,213 +1,106 @@
-#html
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AIU</title>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <header class="container">
-      <div class="header__inner">
-        <div>
-          <a href="#">
-            <img src="./logo.svg" alt="logo" />
-          </a>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+<section class="header">
+    <nav>
+        <a href="index.html"><img src="images/alatoo-logo.png" alt="AIU Logo"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="https://alatoo.edu.kg/" target="_blank">ABOUT</a></li>
+                <li><a href="">EXCHANGE</a></li>
+                <li><a href="">PROGRAMS BY COUNTRIES</a></li>
+                <li><a href="">CONTACT</a></li>
+            </ul>
+        </div>            
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <div class="text-box">
+        <h1>Exchange Programs</h1>
+        <p>Exchange programs offered for students of Ala-Too International University</p>
+        <a href="" class="hero-btn">Visit Us To Know More</a>
+    </div>
+</section>
+
+<section class="exchange">
+    <h1>Exchange programs</h1>
+    <p>There are two main types of exchange programs offered by AIU:</p>
+    <div class="row">
+        <div class="exchange-col">
+            <h3>Bilateral exchange</h3>
+            <p>Info about it</p>
         </div>
-        <nav>
-          <a href="#overview">overview</a>
-          <a href="#features">features</a>
-          <a href="#technology">VISA</a>
-          <a href="#contacts">contact</a>
-          <a href="#contacts">sign up</a>
-        </nav>
-        <div class="header__info">
-          <span>En</span>
-          <button>login</button>
+        <div class="exchange-col">
+            <h3>Erasmus +</h3>
+            <p>Info about it</p>
         </div>
-      </div>
-    </header>
-    <main>
-      <section class="info" id="overview">
-        <div class="info-block">
-          <h1>ALA-TOO</h1>
-          <p>
-            DO YOU WANT TO APPLY ABROAD WTH ALA-TOO INTERNATIONAL UNIVERSITY
-          </p>
-          <button>Sign up</button>
+    </div>
+</section>
+
+<section class="stats">
+    <h2>AIU's Global Reach</h2>
+    <div class="stats-container">
+        <div class="stat-item">
+            <div class="stat-number">100+</div>
+            <div class="stat-label">International partners</div>
         </div>
-      </section>
-      <section class="possibilities container">
-        <div class="possibilities-info">
-          <h2>ABOUT UNIVERSITY</h2>
-          <p>
-            The Ala-Too International University (Russian: Международный университет «Ала-Тоо»; Kyrgyz: «Ала-Тоо» Эл аралык университети), formerly known as the International Atatürk-Alatoo University, is a private university located in Bishkek, Kyrgyzstan that was established in 1996. The university offers graduate, masters, and doctoral programs.
-          </p>
-          <a class="link feature__link" class="link" href="#">Learn more</a>
+        <div class="stat-item">
+            <div class="stat-number">7</div>
+            <div class="stat-label">Dual degree programs</div>
         </div>
-        <div class="possibilities-visual">
-          <img src="./possibilities-img.png" alt="staff" />
+        <div class="stat-item">
+            <div class="stat-number">60+</div>
+            <div class="stat-label">Countries, representing students, teachers, and alumni</div>
         </div>
-      </section>
-      <section class="features" id="features">
-        <h2 class="subtitle">Features</h2>
-        <div class="features__inner container">
-          <div class="feature-block">
-            <img src="./features-1.png" alt="features image card" />
-            <div class="feature-block__inner">
-              <h3>Supports </h3>
-              <p>
-                We support
-              </p>
-              <a class="link feature__link" href="#">Read more</a>
-            </div>
-          </div>
-          <div class="feature-block">
-            <img src="./features-2.png" alt="features image card" />
-            <div class="feature-block__inner">
-              <h3>Manage your expenses on the go</h3>
-              <p>
-                You can access 
-              </p>
-              <a class="link feature__link" href="#">Read more</a>
-            </div>
-          </div>
-          <div class="feature-block">
-            <img src="./features-3.png" alt="features image card" />
-            <div class="feature-block__inner">
-              <h3>Budget Management </h3>
-              <p>
-                 budget
-              </p>
-              <a class="link feature__link" href="#">Read more</a>
-            </div>
-          </div>
+        <div class="stat-item">
+            <div class="stat-number">3,000+</div>
+            <div class="stat-label">Students</div>
         </div>
-      </section>
-      <section id="technology" class="technology container">
-        <h2 class="subtitle">VISA</h2>
-        <div class="teachnology__inner">
-          <div class="technology-block">
-            <img src="tech-1.png" alt="cloud storage" />
-            <h3>RESPONSIBILITY</h3>
-            <p>Access</p>
-          </div>
-          <div class="technology-block">
-            <img src="tech-2.png" alt="secure" />
-            <h3>Secure</h3>
-            <p>All your informaTION</p>
-          </div>
-          <div class="technology-block">
-            <img src="./tech-3.png" alt="pdf download" />
-            <h3>3/4 PHOTO</h3>
-            <p>APPLOAD</p>
-          </div>
-          <div class="technology-block">
-            <img src="./tech-1.png" alt="CSV Download" />
-            <h3>GPA</h3>
-            <p>All your GPA</p>
-          </div>
+        <div class="stat-item">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">International students</div>
         </div>
-      </section>
-      <section class="focus">
-        <div class="focus__inner container">
-          <div class="focus-content">
-            <h3>ERASMUS+</h3>
-            <p>
-              ERASMUS+
-            </p>
-            <div class="focus-content__img">
-              <img src="https://example.com/image.jpg" alt="">
-              <img src="./focus-2.svg" alt="img icon" />
-              <img src="./focus-2.svg" alt="img icon" />
-            </div>
-          </div>
-          <div class="focus-img">
-            <img src="./focus-slider.png" alt="focus-slider" />
-          </div>
+        <div class="stat-item">
+            <div class="stat-number">4,500+</div>
+            <div class="stat-label">Graduates</div>
         </div>
-      </section>
-      <section id="contacts" class="contact container">
-        <div class="contact__intro">
-          <h2 class="subtitle">Contact</h2>
-          <p>
-            Questions or concerns
-          </p>
-        </div>
-        <div class="contact__info">
-          <input
-            class="contact__name-input"
-            type="text"
-            placeholder="First Name"
-          />
-          <input
-            class="contact__lastname-input"
-            type="text"
-            placeholder="Last Name"
-          />
-          <br />
-          <input type="number" placeholder="Phone Number" />
-          <br />
-          <select name="select service" id="select service">
-            <option value="select service">Select service</option>
-            <option value="service-1">service-1</option>
-          </select>
-          <br />
-          <button>Submit now</button>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <div class="footer__inner container">
-        <div class="footer__info">
-          <div class="footer-addres">
-            <h3>Address</h3>
-            <div>
-              <p>
-                USA
-              </p>
-            </div>
-          </div>
-          <div class="footer-services">
-            <h3>Services</h3>
-            <div>
-              <ul>
-                <li>Overview</li>
-                <li>Features</li>
-                <li>VISA</li>
-                <li>Conditions</li>
-                <li>Privacy</li>
-              </ul>
-            </div>
-          </div>
-          <div class="footer-contacts">
-            <h3>Get in Touch</h3>
-            <div>
-              <p>info@ala-too.com</p>
-              <p>+1 844-721-7120</p>
-              <div>
-                <a href="#">
-                  <img src="fb.svg" alt="facebook" />
-                </a>
-                <a href="#">
-                  <img src="./linkedin.svg" alt="linkedin" />
-                </a>
-                <a href="#">
-                  <img src="./twitter.svg" alt="twiiter" />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="footer-payment">
-            <h3>We Support</h3>
-            <div>
-              <img src="./payment.svg" alt="payment methods" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </body>
+    </div>
+</section>
+
+<section class="cta">
+    <h1>If you are interested in an exchange program via AIU</h1>
+    <a href="" class="cta-btn">CONTACT US</a>
+</section>
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+</body>
 </html>
+<!-- Footer with social icons -->
+<footer class="footer">
+    <div class="social-icons">
+      <a href="https://www.instagram.com/alatoo.edu.kg/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/@aiutv1996" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://t.me/+37SFo81Jl4RiMTU6" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+      <a href="https://www.facebook.com/AlaTooInternationalUniversity/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    
+    </div>
+  </footer>
