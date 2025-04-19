@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta and Link Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ala-Too International University</title>
@@ -12,15 +13,17 @@
 </head>
 <body>
 
+<!-- Header Section with Navigation -->
 <section class="header">
     <nav>
+        <!-- Logo and Navigation Links -->
         <a href="index.html"><img src="images/alatoo-logo.png" alt="AIU Logo"></a>
         <div class="nav-links" id="navLinks">
             <i class="fa fa-times" onclick="hideMenu()"></i>
             <ul>
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="https://alatoo.edu.kg/" target="_blank">ABOUT</a></li>
-                <li><a href="exchange.html">EXCHANGE</a></li>
+                <li><a href="#exchange">EXCHANGE</a></li>
                 <li><a href="programs.html">PROGRAMS BY COUNTRIES</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
@@ -30,79 +33,141 @@
     <div class="text-box">
         <h1>Exchange Programs</h1>
         <p>Exchange programs offered for students of Ala-Too International University</p>
-        <a href="#" class="hero-btn">Visit Us To Know More</a>
+        <a href="https://alatoo.edu.kg/" target="_blank" class="hero-btn">Introducing AIU</a>
     </div>
 </section>
 
-<section class="exchange">
+<!-- Exchange Programs Information -->
+<section id="exchange" class="exchange">
     <h1>Exchange Programs</h1>
     <p>There are two main types of exchange programs offered by AIU:</p>
     <div class="row">
         <div class="exchange-col">
-            <h3>Bilateral Exchange</h3>
+            <h3 class="white-text">Bilateral Exchange</h3>
             <p>Information about bilateral exchange programs.</p>
         </div>
         <div class="exchange-col">
-            <h3>Erasmus+</h3>
+            <h3 class="white-text">Erasmus+</h3>
             <p>Information about Erasmus+ programs.</p>
         </div>
+        <div class="exchange-col">
+            <h3 class="white-text">Dual Degree</h3>
+            <p>Information about Dual Degree programs.</p>
+        </div>
     </div>
 </section>
 
+<!-- Statistics Section -->
 <section class="stats">
-    <h2>AIU's Global Reach</h2>
+    <h2 class="white-text">AIU's Global Reach</h2>
     <div class="stats-container">
+      <div class="stats-row">
         <div class="stat-item">
-            <div class="stat-number">100+</div>
-            <div class="stat-label">International Partners</div>
+          <div class="stat-number" data-number="100+">0</div>
+          <div class="stat-label">International Partners</div>
         </div>
         <div class="stat-item">
-            <div class="stat-number">7</div>
-            <div class="stat-label">Dual Degree Programs</div>
+          <div class="stat-number" data-number="7">0</div>
+          <div class="stat-label">Dual Degree Programs</div>
         </div>
         <div class="stat-item">
-            <div class="stat-number">60+</div>
-            <div class="stat-label">Countries Represented</div>
+          <div class="stat-number" data-number="60+">0</div>
+          <div class="stat-label">Countries Represented</div>
+        </div>
+      </div>
+      <div class="stats-row">
+        <div class="stat-item">
+          <div class="stat-number" data-number="3000+">0</div>
+          <div class="stat-label">Students</div>
         </div>
         <div class="stat-item">
-            <div class="stat-number">3,000+</div>
-            <div class="stat-label">Students</div>
+          <div class="stat-number" data-number="500+">0</div>
+          <div class="stat-label">International Students</div>
         </div>
         <div class="stat-item">
-            <div class="stat-number">500+</div>
-            <div class="stat-label">International Students</div>
+          <div class="stat-number" data-number="4500+">0</div>
+          <div class="stat-label">Graduates</div>
         </div>
-        <div class="stat-item">
-            <div class="stat-number">4,500+</div>
-            <div class="stat-label">Graduates</div>
-        </div>
+      </div>
     </div>
-</section>
+</section>  
 
-<section class="cta">
-    <h1>If you are interested in an exchange program via AIU</h1>
-    <a href="contact.html" class="contact-button">CONTACT US</a>
-</section>
-
-
-<footer class="footer">
-    <div class="social-icons">
-        <a href="https://www.instagram.com/alatoo.edu.kg/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.youtube.com/@aiutv1996" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="https://t.me/+37SFo81Jl4RiMTU6" target="_blank"><i class="fab fa-telegram-plane"></i></a>
-        <a href="https://www.facebook.com/AlaTooInternationalUniversity/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<!-- CTA + Footer Combined Section -->
+<section class="cta-footer">
+    <div class="cta">
+        <h1>For Inquiries</h1>
+        <a href="contact.html" class="contact-button">CONTACT US</a>
     </div>
-    <p>© 2024 Ala-Too International University</p>
-</footer>
+
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="https://www.instagram.com/alatoo.edu.kg/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@aiutv1996" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://t.me/+37SFo81Jl4RiMTU6" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://www.facebook.com/AlaTooInternationalUniversity/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        </div>
+        <p>© 2025 Ala-Too International University</p>
+    </footer>
+</section>
 
 <script>
-    var navLinks = document.getElementById("navLinks");
-    function showMenu(){
+    // Navigation Menu Toggle
+    const navLinks = document.getElementById("navLinks");
+    function showMenu() {
         navLinks.style.right = "0";
     }
-    function hideMenu(){
+    function hideMenu() {
         navLinks.style.right = "-200px";
     }
+
+    // Scroll Navigation Background Change
+    const nav = document.querySelector("nav");
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 80) {
+            nav.classList.add("scrolled");
+        } else {
+            nav.classList.remove("scrolled");
+        }
+    });
+
+    // Animated Statistics on Scroll
+    const statNumbers = document.querySelectorAll('.stat-number');
+    const duration = 1500;
+    const frameRate = 30;
+    const interval = 1000 / frameRate;
+    let hasAnimated = false;
+
+    function animateStats() {
+        statNumbers.forEach(stat => {
+            const finalValue = stat.getAttribute('data-number');
+            const cleanFinal = parseInt(finalValue.replace('+', ''));
+            const isPlus = finalValue.includes('+');
+            let current = 0;
+            const step = Math.ceil(cleanFinal / (duration / interval));
+
+            const counter = setInterval(() => {
+                current += step;
+                if (current >= cleanFinal) {
+                    current = cleanFinal;
+                    clearInterval(counter);
+                }
+                stat.textContent = current + (isPlus ? '+' : '');
+            }, interval);
+        });
+    }
+
+    const statsSection = document.querySelector('.stats');
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !hasAnimated) {
+                animateStats();
+                hasAnimated = true;
+                observer.unobserve(statsSection);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(statsSection);
 </script>
 
 </body>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +27,6 @@
         </div>            
         <i class="fa fa-bars" onclick="showMenu()"></i>
     </nav>
-    <h1></h1>
 </section>
 
 <section class="contact">
@@ -44,7 +43,7 @@
                 <i class="fa fa-phone"></i>
                 <span>
                     <h5>+996 555 82 00 00</h5>
-                    <p>Monday to Friday, 9AM to 5PM</p>
+                    <p>Monday to Friday, 2PM to 4PM (14:00 - 16:00)</p>
                 </span>
             </div>
             <div>
@@ -62,7 +61,7 @@
                 <input type="email" placeholder="Enter email address" required>
                 <input type="text" placeholder="Enter your subject" required>
                 <textarea rows="8" placeholder="Message" required></textarea>
-                <button type="submit" class="hero-btn">Send Message</button>
+                <button type="submit" class="send-btn">Send Message</button>
             </form>
         </div>
     </div>
@@ -81,20 +80,19 @@
         
         <div class="map-address">
             <h3>Ala-Too International University</h3>
-            <p></p>
         </div>
     </div>
 </section>
 
 <!-- Footer with social icons -->
-<footer class="footer">
+<footer class="footer-contact">
     <div class="social-icons">
         <a href="https://www.instagram.com/alatoo.edu.kg/" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://www.youtube.com/@aiutv1996" target="_blank"><i class="fab fa-youtube"></i></a>
         <a href="https://t.me/+37SFo81Jl4RiMTU6" target="_blank"><i class="fab fa-telegram-plane"></i></a>
         <a href="https://www.facebook.com/AlaTooInternationalUniversity/" target="_blank"><i class="fab fa-facebook-f"></i></a>
     </div>
-    <p>© 2024 Ala-Too International University</p>
+    <p>© 2025 Ala-Too International University</p>
 </footer>
 
 <script>
@@ -104,9 +102,29 @@
     function hideMenu() {
         document.getElementById("navLinks").style.right = "-200px";
     }
-</script>
+    // Скрытие/показ меню при скролле
+    const nav = document.querySelector("nav");
+    let lastScrollY = window.scrollY;
 
+    window.addEventListener("scroll", () => {
+        const currentScrollY = window.scrollY;
+
+        // Добавляем/удаляем класс .scrolled (фон + стили)
+        if (currentScrollY > 80) {
+            nav.classList.add("scrolled");
+        } else {
+            nav.classList.remove("scrolled");
+        }
+
+        // Скрываем при прокрутке вниз, показываем вверх
+        if (currentScrollY > lastScrollY && currentScrollY > 200) {
+            nav.classList.add("nav-hidden");
+        } else {
+            nav.classList.remove("nav-hidden");
+        }
+
+        lastScrollY = currentScrollY;
+    });
+</script>
 </body>
 </html>
-
-  
