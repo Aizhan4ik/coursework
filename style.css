@@ -15,7 +15,7 @@ body {
 
 /*---- Header Section ----*/
 .header {
-    min-height: 100vh;
+    min-height: 70vh;
     width: 100%;
     background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url('images/Background.jpg');
     background-position: center;
@@ -24,14 +24,15 @@ body {
 }
 
 /*---- Navigation ----*/
-/* Убираем position: fixed и используем sticky */
+
 nav {
     display: flex;
     padding: 1% 3%;
     justify-content: space-between;
     align-items: center;
-    position: sticky;  /* Используем sticky */
-    top: 0;  /* Меню будет приклеено к верхней части окна при прокрутке */
+    position: sticky; 
+    top: 0; 
+
     left: 0;
     right: 0;
     background-color: transparent;
@@ -48,26 +49,25 @@ nav img {
     left: -10px;
 }
 
-/* Уменьшение логотипа при прокрутке */
 nav.scrolled img {
     width: 130px;
     top: 1;
 }
 
-/* Меню */
+
 .nav-links {
     flex: 1;
     text-align: right;
 }
 
-/* Ссылки меню */
+
 .nav-links ul li {
     list-style: none;
     display: inline-block;
     padding: 8px 12px;
 }
 
-/* Стиль ссылок меню */
+
 .nav-links ul li a {
     color: #fff;
     text-decoration: none;
@@ -76,7 +76,7 @@ nav.scrolled img {
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-/* Подчеркивание снизу — появляется из центра */
+
 .nav-links ul li a::after {
     content: '';
     position: absolute;
@@ -90,7 +90,7 @@ nav.scrolled img {
     transition: transform 0.3s ease;
 }
 
-/* Эффект при наведении */
+
 .nav-links ul li a:hover::after {
     transform: translateX(-50%) scaleX(1);
 }
@@ -99,7 +99,7 @@ nav.scrolled img {
     color: #f0f0f0;
 }
 
-/* Фон меню при прокрутке */
+
 nav.scrolled {
     background-color: rgba(128, 0, 0);
     box-shadow: 0 2px 3px rgba(0,0,0,0.1);
@@ -110,7 +110,7 @@ nav.scrolled .nav-links ul li a {
     color: #fff;
 }
 
-/* Полупрозрачный белый бокс при наведении */
+
 nav.scrolled .nav-links ul li a:hover {
     background-color: rgba(255, 255, 255, 0.5);
     padding: 2px 4px;
@@ -118,12 +118,12 @@ nav.scrolled .nav-links ul li a:hover {
     color: #fff;
 }
 
-/* Иконки меню на мобильных устройствах */
+
 nav .fa {
     display: none;
 }
 
-/* Мобильная адаптация */
+
 @media(max-width: 700px) {
     nav img {
         width: 150px;
@@ -203,36 +203,75 @@ nav .fa {
 
 .hero-btn:hover {
     background: #800000;
-    border-color: #fff;
+    border-color: #fffefe;
 }
 
-/*---- Exchange Section ----*/
+/* Exchange Programs Section */
 .exchange {
-    width: 80%;
-    margin: auto;
+    padding: 80px 0;
     text-align: center;
-    padding-top: 40px;
 }
-.exchange-col {
-    flex-basis: 45%;
-    background: #800000;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    padding: 20px 12px;
-    transition: 0.5s;
-    color: white;
+
+.exchange h1 {
+    font-size: 2.2rem;
+    color: #000000;
+    margin-bottom: 20px;
 }
-.exchange-col:hover {
-    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2);
+
+.exchange > p {
+    margin-bottom: 40px;
+    color: #000000;
 }
+
 .row {
-    margin: 5%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-.white-text {
-    color: white;
+
+.exchange-col {
+    flex: 1;
+    min-width: 300px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.exchange-col:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    background:#800000;
+}
+
+.exchange-col h3 {
+    color: #000000;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.exchange-col p {
+    color: #000000;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .exchange-col {
+        min-width: auto;
+    }
 }
 
 /*---- Stats Section ----*/
@@ -281,7 +320,7 @@ nav .fa {
 
 /*---- CTA ----*/
 .cta-footer {
-    background-color: #1a1a1a;
+    background-color: #1b1616;
     color: white;
     text-align: center;
     padding: 50px 20px 30px;
@@ -309,16 +348,18 @@ nav .fa {
 }
 
 .footer {
-    margin-top: 40px;
+    margin-top: 10px;
+  
 }
 
 .social-icons {
     margin-bottom: 15px;
     margin-top: 25px;
+    
 }
 
 .social-icons a {
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 1.4em;
     margin: 0 10px;
     transition: color 0.3s ease;
@@ -393,8 +434,8 @@ nav .fa {
     display: inline-block;
     padding: 12px 30px;
     font-size: 16px;
-    color: #800000; /* бордовый текст */
-    border: 2px solid #800000; /* бордовая рамка */
+    color: #800000; 
+    border: 2px solid #800000; 
     background-color: transparent;
     border-radius: 5px;
     cursor: pointer;
@@ -438,9 +479,33 @@ nav .fa {
 .footer-contact {
     text-align: center;
     padding: 20px;
-    color: #000000; /* или другой цвет текста */
+    color: #000000; 
+    
 }
 .footer-contact p {
     margin-top: 10px;
     color: #000000
+}
+.footer-contact1{
+    text-align: center;
+    padding: 20px;
+    color: #000000; 
+    
+}
+.social-icon{
+
+    margin-bottom: 15px;
+    margin-top: 25px;
+    
+}
+
+.social-icon a {
+    color: rgb(0, 0, 0);
+    font-size: 1.4em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icon a:hover {
+    color: #800000;
 }
