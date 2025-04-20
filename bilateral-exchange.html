@@ -13,30 +13,20 @@
 <body>
     <section class="header2">
         <nav>
-            <a href="index.html"><img src="images/alatoo-logo.png" alt="AIU Logo" class="logo"></a>
-            
+            <img src="images/alatoo-logo.png" alt="AIU Logo" class="logo">
             <div class="nav-links" id="navLinks">
-
-
                 <ul>
-
                     <li><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="exchange.html">EXCHANGE</a></li>
-                    <li><a href="programs.html">PROGRAMS BY COUNTRIES</a></li>
+                    <li><a href="#about-exchange">ABOUT</a></li>
+                    <li><a href="index.html#exchange">EXCHANGE</a></li>
+                    <li><a href="programs.html">PARTNERS BY COUNTRIES</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
-
             </div>
-            
-    
         </nav>
-        
         <div class="header-content">
             <h1>Bilateral Exchange Program</h1>
             <p class="subtitle">Expand your academic horizons with international exchange opportunities at Ala-Too International University</p>
-          
-
         </div>
     </section>
     <section id="partners" class="section partners">
@@ -49,26 +39,23 @@
             </div>
         </div>
     </section>
-<!-- Add this section after your existing content, before the footer -->
+
 <section class="eligibility-section">
     <div class="container">
         <div class="section-title">
             <h2>Eligibility Criteria</h2>
         </div>
-        
         <div class="criteria-grid">
             <div class="criterion">
                 <i class="fas fa-calendar-times"></i>
                 <h3>Study Period</h3>
                 <p>Cannot be enrolled in first or last semester of studies</p>
             </div>
-            
             <div class="criterion">
                 <i class="fas fa-language"></i>
                 <h3>English Proficiency</h3>
                 <p>Minimum B2 level required</p>
             </div>
-            
             <div class="criterion">
                 <i class="fas fa-star"></i>
                 <h3>Academic Performance</h3>
@@ -83,7 +70,7 @@
         <div class="section-title">
             <h2>Required Documents</h2>
         </div>
-        
+
         <div class="documents-list">
             <div class="document-item">
                 <i class="fas fa-file-alt"></i>
@@ -220,6 +207,9 @@
     </footer>
 </section>
 
+<button class="back-to-top" aria-label="Наверх">
+    ↑
+</button>
 
 <script>
     function showMenu() {
@@ -228,21 +218,19 @@
     function hideMenu() {
         document.getElementById("navLinks").style.right = "-200px";
     }
-    // Скрытие/показ меню при скролле
+    //open and close menu when scrolling
     const nav = document.querySelector("nav");
     let lastScrollY = window.scrollY;
 
     window.addEventListener("scroll", () => {
         const currentScrollY = window.scrollY;
 
-        // Добавляем/удаляем класс .scrolled (фон + стили)
         if (currentScrollY > 80) {
             nav.classList.add("scrolled");
         } else {
             nav.classList.remove("scrolled");
         }
 
-        // Скрываем при прокрутке вниз, показываем вверх
         if (currentScrollY > lastScrollY && currentScrollY > 200) {
             nav.classList.add("nav-hidden");
         } else {
@@ -251,10 +239,25 @@
 
         lastScrollY = currentScrollY;
     });
+
+    //Back On Top Button
+    const backToTopButton = document.querySelector('.back-to-top');
+        
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('visible');
+        } else {
+            backToTopButton.classList.remove('visible');
+        }
+    });
+        
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+         });
+    });
 </script>
-
-
-
 
 </body>
 </html>

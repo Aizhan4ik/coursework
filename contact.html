@@ -19,9 +19,9 @@
             <i class="fa fa-times" onclick="hideMenu()"></i>
             <ul>
                 <li><a href="index.html">HOME</a></li>
-                <li><a href="https://alatoo.edu.kg/" target="_blank">ABOUT</a></li>
-                <li><a href="exchange.html">EXCHANGE</a></li>
-                <li><a href="programs.html">PROGRAMS BY COUNTRIES</a></li>
+                <li><a href="#about-exchange">ABOUT</a></li>
+                <li><a href="#exchange">EXCHANGE</a></li>
+                <li><a href="programs.html">PARTNERS BY COUNTRIES</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
         </div>            
@@ -95,6 +95,10 @@
     <p>© 2025 Ala-Too International University</p>
 </footer>
 
+<button class="back-to-top" aria-label="Наверх">
+    ↑
+</button>
+
 <script>
     function showMenu() {
         document.getElementById("navLinks").style.right = "0";
@@ -124,6 +128,23 @@
         }
 
         lastScrollY = currentScrollY;
+    });
+    //Back On Top Button
+    const backToTopButton = document.querySelector('.back-to-top');
+        
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('visible');
+        } else {
+            backToTopButton.classList.remove('visible');
+        }
+    });
+        
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+         });
     });
 </script>
 </body>

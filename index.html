@@ -17,14 +17,14 @@
 <section class="header">
     <nav>
         <!-- Logo and Navigation Links -->
-        <a href="index.html"><img src="images/alatoo-logo.png" alt="AIU Logo"></a>
+        <img src="images/alatoo-logo.png" alt="AIU Logo" class="logo">
         <div class="nav-links" id="navLinks">
             <i class="fa fa-times" onclick="hideMenu()"></i>
             <ul>
                 <li><a href="index.html">HOME</a></li>
-                <li><a href="https://alatoo.edu.kg/" target="_blank">ABOUT</a></li>
+                <li><a href="#about-exchange">ABOUT</a></li>
                 <li><a href="#exchange">EXCHANGE</a></li>
-                <li><a href="programs.html">PROGRAMS BY COUNTRIES</a></li>
+                <li><a href="programs.html">PARTNERS BY COUNTRIES</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
         </div>            
@@ -37,25 +37,73 @@
     </div>
 </section>
 
+<!-- About Exchange Programs Section -->
+<section id="about-exchange" class="about-exchange-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-heading">Global Exchange Programs</h2>
+            <p class="intro-text">At Ala-Too International University, we provide life-changing international experiences through our comprehensive exchange programs, designed to broaden your academic and cultural perspectives.</p>
+        </div>
+        
+        <div class="about-exchange-wrapper">
+            <div class="about-exchange-content">
+                <div class="program-details">
+                    <h3 class="subsection-heading">Academic Enrichment</h3>
+                    <p class="body-text">Our exchange programs allow you to study at prestigious partner universities while earning credits toward your degree. You'll experience different teaching methods, access specialized courses, and gain unique academic perspectives.</p>
+                    
+                    <h3 class="subsection-heading">Cultural Immersion</h3>
+                    <p class="body-text">Living and studying in a foreign country provides unparalleled cultural immersion. You'll develop intercultural communication skills, adapt to new environments, and build a global network of friends and professional contacts.</p>
+                </div>
+            </div>
+            
+            <div class="about-exchange-image">
+                <img src="https://golnk.ru/2RLe5" alt="Students on exchange program" class="content-image">
+            </div>
+        </div>
+    </div>
+</section>
 <!-- Exchange Programs Information -->
-<section id="exchange" class="exchange">
-    <h1>Exchange Programs</h1>
-    <p>There are two main types of exchange programs offered by AIU:</p>
-    <div class="row">
-        <a href="bilateral-exchange.html" class="exchange-col">
-            <h3>Bilateral Exchange</h3>
-            <p>Information about bilateral exchange programs.</p>
-        </a>
+<section id="exchange" class="exchange-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Exchange Programs</h2>
+            <p class="section-intro">Discover international opportunities through our diverse exchange programs</p>
+        </div>
         
-        <a href="erasmus.html" class="exchange-col">
-            <h3>Erasmus+</h3>
-            <p>Information about Erasmus+ programs.</p>
-        </a>
-        
-        <a href="dual-degree.html" class="exchange-col">
-            <h3>Dual Degree</h3>
-            <p>Information about Dual Degree programs.</p>
-        </a>
+        <div class="exchange-grid">
+            <a href="bilateral-exchange.html" class="exchange-card">
+                <div class="card-image">
+                    <img src="https://golnk.ru/p3Ap4" alt="Bilateral Exchange Program">
+                </div>
+                <div class="card-content">
+                    <h3>Bilateral Exchange</h3>
+                    <p>Study abroad at one of our partner universities through direct institutional agreements.</p>
+                    <span class="learn-more">Learn more →</span>
+                </div>
+            </a>
+            
+            <a href="erasmus.html" class="exchange-card">
+                <div class="card-image">
+                    <img src="https://golnk.ru/5DE47" alt="Erasmus+ Program">
+                </div>
+                <div class="card-content">
+                    <h3>Erasmus+</h3>
+                    <p>European exchange opportunities with financial support from the EU Erasmus+ program.</p>
+                    <span class="learn-more">Learn more →</span>
+                </div>
+            </a>
+            
+            <a href="dual-degree.html" class="exchange-card">
+                <div class="card-image">
+                    <img src="https://golnk.ru/xM4Dn" alt="Dual Degree Program">
+                </div>
+                <div class="card-content">
+                    <h3>Dual Degree</h3>
+                    <p>Earn degrees from both AIU and our partner institutions through collaborative programs.</p>
+                    <span class="learn-more">Learn more →</span>
+                </div>
+            </a>
+        </div>
     </div>
 </section>
 
@@ -111,6 +159,11 @@
         <p>© 2025 Ala-Too International University</p>
     </footer>
 </section>
+
+<button class="back-to-top" aria-label="Наверх">
+    ↑
+</button>
+
 <script>
     // Navigation Menu Toggle
     const navLinks = document.getElementById("navLinks");
@@ -169,6 +222,25 @@
     }, { threshold: 0.5 });
 
     observer.observe(statsSection);
+    
+    //Back On Top Button
+    const backToTopButton = document.querySelector('.back-to-top');
+        
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('visible');
+        } else {
+            backToTopButton.classList.remove('visible');
+        }
+    });
+        
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+         });
+    });
+
 </script>
 
 </body>

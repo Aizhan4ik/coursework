@@ -7,19 +7,17 @@
     <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-
-       
 </head>
 <body>
     <!-- Navigation -->
     <nav4>
-        <a href="index.html"><img src="images/alatoo-logo.png" alt="AIU Logo" class="logo"></a>
+        <img src="images/alatoo-logo.png" alt="AIU Logo" class="logo">
         <div class="nav-links">
             <ul>
                 <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="exchange.html">EXCHANGE</a></li>
-                <li><a href="programs.html">PROGRAMS</a></li>
+                <li><a href="#about-exchange">ABOUT</a></li>
+                <li><a href="index.html#exchange">EXCHANGE</a></li>
+                <li><a href="programs.html">PARTNERS BY COUNTRIES</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
         </div>
@@ -30,7 +28,6 @@
         <div class="header-content">
             <h1>Dual Degree Programme</h1>
             <p class="subtitle">Earn two diplomas from Ala-Too International University and our partner institutions</p>
-            <a href="#eligibility" class="btn">View Eligibility</a>
         </div>
     </section>
 
@@ -170,5 +167,29 @@
             <p>© 2025 Ala-Too International University</p>
         </footer>
     </section>
+
+    <button class="back-to-top" aria-label="Наверх">
+        ↑
+    </button>
+    
+    <script>
+        // Кнопка "Наверх"
+        const backToTopButton = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html>
