@@ -41,15 +41,15 @@ nav {
 
 /* Логотип */
 nav img {
-    width: 200px;
+    width: 100px;
     transition: width 0.3s ease;
     position: absolute;
-    top: -10px;
-    left: -10px;
+    top: 2px;
+    left: 2px;
 }
 
 nav.scrolled img {
-    width: 130px;
+    width: 65px;
     top: 1;
 }
 
@@ -106,7 +106,6 @@ nav .fa {
     display: none;
 }
 
-
 @media(max-width: 700px) {
     nav img {
         width: 150px;
@@ -148,7 +147,6 @@ nav .fa {
         padding: 30px;
     }
 }
-
 
 /*---- Hero Section ----*/
 .text-box {
@@ -461,17 +459,37 @@ nav .fa {
     display: inline-block;
     text-decoration: none;
     color: #fff;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     padding: 12px 34px;
     font-size: 13px;
     background: transparent;
     position: relative;
     cursor: pointer;
-    transition: 1s;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    border-radius: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.contact-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+    z-index: 1;
 }
 .contact-button:hover {
     background: #800000;
-    border-color: #fff;
+    border-color: #800000;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+.contact-button:hover::before {
+    left: 100%;
 }
 
 .footer {
@@ -480,20 +498,20 @@ nav .fa {
 }
 
 .social-icons {
-    margin-bottom: 15px;
-    margin-top: 25px;
-    
+    margin-bottom: 25px; 
 }
 
 .social-icons a {
-    color: rgb(255, 255, 255);
+    color: white;
     font-size: 1.4em;
-    margin: 0 10px;
-    transition: color 0.3s ease;
+    margin: 0 15px;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .social-icons a:hover {
     color: #800000;
+    transform: translateY(-5px) scale(1.2);
 }
 
 .footer p {
@@ -506,7 +524,7 @@ nav .fa {
     background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url('https://golnk.ru/gryvl');
     background-size: cover;
     background-position: center;
-    height: 50vh; /* половина экрана */
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -526,7 +544,7 @@ nav .fa {
 
 .contact-col div {
     display: flex;
-    align-items: center;
+    align-items: right;
     margin-bottom: 40px;
 }
 
@@ -620,20 +638,22 @@ nav .fa {
     
 }
 .social-icon{
-    margin-bottom: 15px;
-    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .social-icon a {
     color: rgb(0, 0, 0);
     font-size: 1.4em;
-    margin: 0 10px;
-    transition: color 0.3s ease;
+    margin: 0 15px;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .social-icon a:hover {
     color: #800000;
+    transform: translateY(-5px) scale(1.2);
 }
+
 /* Back On Top */
 .back-to-top {
     position: fixed;
