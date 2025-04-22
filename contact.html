@@ -12,15 +12,15 @@
 </head>
 <body>
 
-<section class="header">
+<section class="header-contact">
     <nav>
-        <img src="https://golnk.ru/z263d" alt="AIU Logo">
+        <img src="https://golnk.ru/z2y50" alt="AIU Logo">
         <div class="nav-links" id="navLinks">
             <i class="fa fa-times" onclick="hideMenu()"></i>
             <ul>
                 <li><a href="index.html">HOME</a></li>
-                <li><a href="#about-exchange">ABOUT</a></li>
-                <li><a href="#exchange">EXCHANGE</a></li>
+                <li><a href="index.html#about-exchange">ABOUT</a></li>
+                <li><a href="index.html#exchange">EXCHANGE</a></li>
                 <li><a href="programs.html">PARTNERS BY COUNTRIES</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
@@ -106,21 +106,19 @@
     function hideMenu() {
         document.getElementById("navLinks").style.right = "-200px";
     }
-    // Скрытие/показ меню при скролле
+    
     const nav = document.querySelector("nav");
     let lastScrollY = window.scrollY;
 
     window.addEventListener("scroll", () => {
         const currentScrollY = window.scrollY;
 
-        // Добавляем/удаляем класс .scrolled (фон + стили)
         if (currentScrollY > 80) {
             nav.classList.add("scrolled");
         } else {
             nav.classList.remove("scrolled");
         }
 
-        // Скрываем при прокрутке вниз, показываем вверх
         if (currentScrollY > lastScrollY && currentScrollY > 200) {
             nav.classList.add("nav-hidden");
         } else {
