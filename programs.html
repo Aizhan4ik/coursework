@@ -158,8 +158,8 @@
             width: 100px;
             transition: width 0.3s ease;
             position: absolute;
-            top: -10px;
-            left: -10px;
+            top: 2px;
+            left: 2px;
         }
         
         nav.scrolled img {
@@ -561,6 +561,7 @@
             border-radius: 30px;
             font-weight: 600;
             letter-spacing: 1px;
+            margin-top: 20px;
         }
 
         .cta .contact-button::before {
@@ -572,6 +573,7 @@
             height: 100%;
             background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
             transition: 0.5s;
+            z-index: 1;
         }
 
         .cta .contact-button:hover {
@@ -585,26 +587,8 @@
             left: 100%;
         }
 
-        .cta h1 {
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            position: relative;
-            display: inline-block;
-        }
-
-        .cta h1::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: #800000;
-        }
-
         .footer {
-            margin-top: 60px;
+            margin-top: 30px;
             position: relative;
         }
 
@@ -821,7 +805,7 @@
             <i class="fa fa-times" onclick="hideMenu()"></i>
             <ul>
                 <li><a href="index.html">HOME</a></li>
-                <li><a href="#about-exchange">ABOUT</a></li>
+                <li><a href="index.html#about-exchange">ABOUT</a></li>
                 <li><a href="index.html#exchange">EXCHANGE</a></li>
                 <li><a href="programs.html" class="active">PARTNERS BY COUNTRIES</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
